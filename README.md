@@ -1,5 +1,15 @@
 #### skydragon npm模块
 
+开发文档请访问 [http://skydragon.tecclass.cn/1.0/#/index](http://skydragon.tecclass.cn/1.0/#/index)
+
+demo请访问:
+
+Jugg: [http://jugg.tecclass.cn/views/](http://jugg.tecclass.cn/views/)
+
+Luna: [http://luna.tecclass.cn/views/](http://luna.tecclass.cn/views/)
+
+Lina: [http://lina.tecclass.cn/views/](http://lina.tecclass.cn/views/)
+
 ##### 使用方式
 
 ```
