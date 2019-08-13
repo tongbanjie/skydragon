@@ -1,0 +1,44 @@
+.tb-card
+  position relative
+  background-color #fff
+  box-shadow 0 1px 1px rgba(0,0,0,0.15)
+  margin-bottom 30px
+  .tb-card-footer
+    position relative
+  .tb-card-header
+    position relative
+    h2
+      margin 0
+      line-height 100%
+      font-size 17px
+      font-weight 400
+      small
+        display block
+        margin-top 8px
+        color #aeaeae
+        line-height 160%
+    .actions
+      position absolute
+      right 10px
+      z-index 2
+      top 15px
+  .tb-card-header[class*="tb-bgm-"] h2, .tb-card-header[class*="tb-bgm-"] h2 small
+    color #fff
+  .tb-card-body
+    &.tb-card-padding-sm
+      padding 15px
+  .tb-card-header:not([class*="bgm-"]) + .tb-card-padding, .tb-card-footer:not([class*="bgm-"]) + .tb-card-padding
+    padding-top 0
+  @media screen and (min-width: 768px)
+    .tb-card-header, .tb-card-footer
+      padding 23px 25px
+    .tb-card-body, .tb-card-footer
+      &.tb-card-padding
+        padding 23px 26px
+  
+  @media screen and (max-width: 991px)
+    .tb-card-header, .tb-card-footer
+      padding 18px
+    .tb-card-body, .tb-card-footer
+      &.tb-card-padding
+        padding 18px

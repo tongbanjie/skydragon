@@ -1,0 +1,88 @@
+.tb-input-group
+  position relative
+  font-size 14px
+  display inline-block
+  width 100%
+
+.tb-input, .tb-input-textarea
+  outline none
+  background-color #fff
+  border-radius 4px
+  border 1px solid #bfcbd9
+  color #1f2d3d
+  display block
+  font-size inherit
+  line-height 1.42857143
+  padding 3px 10px
+  transition border-color .2s cubic-bezier(.645,.045,.355,1)
+  width 100%
+  box-sizing border-box
+  -webkit-appearance none
+  &:focus
+    border-color #2196f3
+  &:disabled
+    background-color #eaeaea
+    opacity 0.8
+
+.tb-input
+  height 36px
+
+.tb-input-icon, .tb-input-icon-left
+  position absolute
+  width 35px
+  height 100%
+  top 0
+  text-align center
+  color rgb(191, 203, 217)
+  transition all 0.3s
+  line-height 36px
+  font-size 18px
+    
+.tb-input-group-icon
+  .tb-input-icon
+    right 0
+  .tb-input, .tb-input-textarea
+    padding-right 36px
+
+.tb-input-group-icon-left
+  .tb-input-icon-left
+    left 0
+  .tb-input, .tb-input-textarea
+    padding-left 36px
+    
+  
+
+.tb-input-group-prepend, .tb-input-group-append
+  display inline-table
+  .tb-input
+    display table-cell
+    vertical-align middle
+  .tb-input-textarea
+    display table-cell
+
+.tb-input-prepend, .tb-input-append
+  display table-cell
+  vertical-align middle
+  width 1%
+  padding 0 10px
+  white-space nowrap
+  position relative
+  border 1px solid #bfcbd9
+  background-color #fff
+  overflow hidden   
+  z-index 2 
+
+.tb-input-group-prepend
+  .tb-input, .tb-input-textarea
+    border-top-left-radius 0
+    border-bottom-left-radius 0
+  .tb-input-prepend
+    border-right-width 0
+    border-radius 4px 0 0 4px
+.tb-input-group-append
+  .tb-input, .tb-input-textarea
+    border-top-right-radius 0
+    border-bottom-right-radius 0    
+  .tb-input-append
+    border-left-width 0
+    border-radius 0 4px 4px 0

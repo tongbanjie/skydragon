@@ -1,0 +1,76 @@
+.tb-table-wrap
+  position relative
+  width 100%
+  overflow auto
+  .tb-table-con-wrap
+    overflow auto
+  .tb-table-header-wrap
+    position sticky
+    top 0
+    z-index 22
+  &.tb-table-wrap-border
+    border 1px solid #dfe6ec
+    .tb-table
+      tr
+        td, th
+          border-right 1px solid #dfe6ec
+          &:last-child
+            border-right none
+  &.tb-table-wrap-stripe
+    .tb-table
+      tr:nth-child(2n)
+        background-color: #fafafa
+  &.tb-table-wrap-hover
+    .tb-table
+      tr:hover
+        background-color: #ecf9ff!important
+      
+.tb-table
+  position relative
+  width 100%
+  max-width 100%
+  border-collapse collapse
+  border-spacing 0
+  background-color #fff
+  table-layout fixed
+  tr
+    th
+      background-color #f2f2f2
+    td, th
+      padding 10px
+      vertical-align middle
+      text-align left
+      text-overflow ellipsis
+      word-wrap break-word
+      border-bottom 1px solid #dfe6ec
+    &:last-child
+      td
+        border-bottom none
+// 兼容以前的样式
+  &.tb-table-border
+    border 1px solid #dfe6ec
+    tr
+      td, th
+        border-right 1px solid #dfe6ec
+        &:last-child
+          border-right none
+  &.tb-table-stripe
+    tr:nth-child(2n)
+        background-color: #fafafa
+  &.tb-table-hover
+    tr:hover
+      background-color: #ecf9ff!important
+
+.tb-table-fixedleft-wrap, .tb-table-fixedright-wrap
+  position absolute
+  top 0
+  overflow hidden
+  z-index 23
+.tb-table-fixedleft-wrap
+  left 0
+  &.shadow
+    box-shadow(1px -1px 2px rgba(0,0,0,0.1))
+.tb-table-fixedright-wrap
+  right 0
+  &.shadow
+    box-shadow(-1px -1px 2px rgba(0,0,0,0.1))

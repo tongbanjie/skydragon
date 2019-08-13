@@ -1,0 +1,33 @@
+.tb-pagination-div
+  .tb-pagination
+    li
+      float left
+      a
+        padding 0 20px
+        box-sizing border-box
+        background-color #f2f2f2
+        height 36px
+        line-height 36px
+        display block
+      &.active
+        a
+          background-color #2196f3
+          color #fff
+      &.disabled
+        a
+          color #d0d0d0
+      &:not(.disabled):not(.active):hover
+        a
+          box-shadow(0 1px 20px rgba(0,0,0,0.3))
+          background-color #2196f3
+          color #fff
+  .tb-pagination-desc
+    height 36px
+    border 1px solid transparent
+    box-sizing border-box
+    line-height 36px
+    color #1f2d3d
+    border-radius(4px)
+    padding 0 10px
+    text-align right
+      

@@ -1,0 +1,22 @@
+{
+  "name": "skydragon",
+  "version": "1.0.104",
+  "description": "skydragon npm",
+  "main": "./lib/index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "vue",
+    "skydragon"
+  ],
+  "author": "zhishui",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.16",
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "vue-style-loader": "^2.0.0"
+  }
+}

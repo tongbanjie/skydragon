@@ -1,0 +1,80 @@
+.tb-carousel
+  position relative
+  width 100%
+  height 100%
+  background-color #fff
+  .tb-carousel-indicators
+    position absolute
+    z-index 10
+    bottom 20px
+    left 50%
+    transform(translateX(-50%))
+    ul
+      li
+        float left
+        width 14px
+        height 14px
+        margin-right 10px
+        margin-left 10px
+        border-radius(14px)
+        cursor pointer
+        border 1px solid #f2f2f2
+        transition(all 0.25s)
+        background-color rgba(31,45,61,.11)
+        &.active
+          background-color #f2f2f2
+  .tb-carousel-inner
+    position relative
+    width 100%
+    height 100%
+    overflow hidden
+    .tb-carousel-item
+      position absolute
+      top 0
+      width 100%
+      height 100%
+  .tb-carousel-control
+    position absolute
+    width 40px
+    height 40px
+    border-radius(40px)
+    background-color rgba(31,45,61,.11)
+    top 50%
+    margin-top -20px
+    color #fff
+    text-align center
+    cursor pointer
+    transition(all 0.25s)
+    &:hover
+      background-color rgba(31,45,61,.8)
+    .tb-icon
+      margin-top 11px
+    &.tb-carousel-control-left
+      left 10px
+    &.tb-carousel-control-right
+      right 10px
+
+.te-ciright-enter-active
+  left 100%
+.te-ciright-enter-to
+  transition(all 0.5s ease)
+  left 0
+.te-ciright-leave-active
+  left 0
+.te-ciright-leave-to
+  transition(all 0.5s ease)
+  left -100%
+
+.te-cileft-enter-active
+  left -100%
+.te-cileft-enter-to
+  transition(all 0.5s ease)
+  left 0
+.te-cileft-leave-active
+  left 0
+.te-cileft-leave-to
+  transition(all 0.5s ease)
+  left 100%
+  
+        
+        
