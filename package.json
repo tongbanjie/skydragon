@@ -1,6 +1,6 @@
 {
   "name": "skydragon",
-  "version": "1.0.106",
+  "version": "1.0.107",
   "description": "UI Components base on Vue",
   "main": "./lib/index.js",
   "repository": {
