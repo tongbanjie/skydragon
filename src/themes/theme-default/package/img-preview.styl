@@ -1,0 +1,111 @@
+IMGPREVIEWZINDEX=9999
+.tb-imgpreview
+  .tb-imgpreview-con
+    height 100%
+    width calc(100% - 80px)
+    text-align center
+    padding 20px
+    background-color #f2f2f2
+    position fixed
+    top 0
+    left 0
+    overflow auto
+    z-index IMGPREVIEWZINDEX
+    & > div
+      transition all 0.25s
+    .tb-imgpreview-img
+      max-height 100%
+      max-width 100%
+      box-shadow rgba(0, 0, 0, 0.1) 0px 1px 1px
+  .tb-imgpreview-toolbar
+    text-align center
+    position fixed
+    right 0
+    top 0
+    height 100%
+    width 80px
+    background-color #323346
+    box-shadow 0 1px 3px rgba(0,0,0,0.3)
+    z-index IMGPREVIEWZINDEX
+    .tb-imgpreview-ul
+      overflow hidden
+      li
+        padding 20px 0
+        cursor pointer
+        background-color #323346
+        .tb-icon
+          color #fff
+          font-size 24px
+        &:not(.disabled):hover
+          background-color rgba(255,255,255,0.4)
+        &.disabled
+          opacity 0.5
+          cursor not-allowed
+    .tb-imgpreview-serial
+      bottom 20px
+      position absolute
+      color #fff
+      left 0
+      width 100%
+  .tb-imgpreview-thumb
+    position fixed
+    left 0
+    top 0
+    width calc(100% - 80px)
+    height 100%
+    z-index IMGPREVIEWZINDEX + 1
+    background-color #f2f2f2
+    padding 20px
+    overflow auto
+    .tb-imgpreview-thumb-one
+      width 220px
+      height 300px
+      box-shadow 0 1px 1px rgba(0,0,0,0.1)
+      background-color #fff
+      float left
+      margin-right 20px
+      margin-bottom 20px
+      line-height 300px
+      cursor pointer
+      border-radius 4px
+      overflow hidden
+      &:hover
+        opacity 0.6
+      img
+        max-width 100%
+        max-height 100%
+      
+.te-imgpreview-enter-active
+  .tb-imgpreview-con, .tb-imgpreview-thumb
+    opacity 0
+    left -300px
+  .tb-imgpreview-toolbar
+    opacity 0
+    right -80px
+.te-imgpreview-enter-to
+  transition all 0.25s
+  .tb-imgpreview-con, .tb-imgpreview-thumb
+    opacity 1
+    left 0
+    transition all 0.25s
+  .tb-imgpreview-toolbar
+    opacity 1
+    right 0
+    transition all 0.25s
+.te-imgpreview-leave-active
+  .tb-imgpreview-con, .tb-imgpreview-thumb
+    opacity 1
+    left 0
+  .tb-imgpreview-toolbar
+    opacity 1
+    right 0
+.te-imgpreview-leave-to
+  transition all 0.25s
+  .tb-imgpreview-con, .tb-imgpreview-thumb
+    left -300px
+    transition all 0.25s
+    opacity 0
+  .tb-imgpreview-toolbar
+    right -80px
+    transition all 0.25s
+    opacity 0

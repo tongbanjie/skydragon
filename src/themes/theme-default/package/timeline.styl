@@ -1,0 +1,72 @@
+
+.tb-timeline 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+.tb-timeline-item 
+  margin: 0!important;
+  padding: 0 0 12px;
+  list-style: none;
+  position: relative
+
+.tb-timeline-item-tb 
+  height: 100%;
+  border-left: 1px solid #e3e8ee;
+  position: absolute;
+  left: 6px;
+  top: 0;
+.tb-timeline-item-pending .tb-timeline-item-tb 
+  display: none
+  
+.tb-timeline-item-head
+  width 13px
+  height 13px
+  background-color #fff
+  border-radius 50%
+  border 1px solid transparent
+  position absolute
+
+.tb-timeline-item-head-blue 
+  border-color #39f
+  color #39f
+  
+.tb-timeline-item-head-red
+  border-color #f30
+  color #f30
+
+.tb-timeline-item-head-green
+  border-color #0c6
+  color #0c6
+
+.tb-timeline-item-head-custom
+  width 40px
+  height auto
+  margin-top 6px
+  padding 3px 0
+  text-align center
+  line-height 1
+  border 0
+  border-radius 0
+  font-size 14px
+  position absolute
+  left -13px
+  transform translateY(-50%)
+
+.tb-timeline-item-content
+  padding 1px 1px 10px 24px
+  font-size 12px
+  position relative
+  top -3px
+  
+.tb-timeline-item-content p
+  text-align left
+
+.tb-timeline-item:last-child .tb-timeline-item-tb
+    display none
+
+.tb-timeline.tb-timeline-pending .tb-timeline-item:nth-last-of-type(2) .tb-timeline-item-tb
+    border-left 1px dotted #e3e8ee
+
+.tb-timeline.tb-timeline-pending .tb-timeline-item:nth-last-of-type(2) .tb-timeline-item-content
+    min-height 48px

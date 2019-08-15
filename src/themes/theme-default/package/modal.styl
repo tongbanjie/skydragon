@@ -1,0 +1,62 @@
+.tb-modal
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  width 100%
+  height 100%
+  background-color rgba(0, 0, 0, 0.4)
+  overflow-x hidden
+  overflow-y auto
+  z-index 1055
+.tb-modal-dialog
+  background-color #fff
+  box-shadow(0 5px 20px rgba(0,0,0,0.31))
+  margin 60px auto 20px
+  .tb-modal-header
+    padding 20px
+    position relative
+    h2
+      font-size 18px
+      font-weight normal
+      margin 0
+      margin-right 50px
+    .tb-action
+      position absolute
+      right 20px
+      top 15px
+
+// size
+.tb-modal-md
+  width 600px
+.tb-modal-xs
+  width 300px
+.tb-modal-lg
+  width 900px
+
+// effect
+.te-fade-enter-active
+  transition opacity 0.25s
+  opacity 0
+  .tb-modal-dialog
+    transition none
+    margin-top -100px
+.te-fade-enter-to
+  opacity 1
+  .tb-modal-dialog
+    transition all 0.25s
+    margin-top 60px
+
+.te-fade-leave-active
+  transition opacity 0.25s
+  opacity 1
+  .tb-modal-dialog
+    transition none
+    margin-top 60px
+.te-fade-leave-to
+  opacity 0
+  .tb-modal-dialog
+    transition all 0.25s
+    margin-top -100px
+    

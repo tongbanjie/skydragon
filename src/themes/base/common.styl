@@ -1,0 +1,298 @@
+@import './vendor.styl'
+
+gridColumns = 24
+
+// clear
+clearfix = ('.clearfix' '.tb-row')
+
+for n in clearfix
+  {n}:before,{n}:after
+    display table
+    content " "
+  {n}:after
+    clear both
+
+// 栅格
+gridSetDefault()
+  for n in (0..gridColumns)
+    .tb-col-{n}
+      width (100% / gridColumns) * n
+    .tb-col-offset-{n}
+      margin-left (100% / gridColumns) * n
+    .tb-col-pull-{n}
+      right (100% / gridColumns) * n
+    .tb-col-push-{n}
+      left (100% / gridColumns) *n 
+      
+gridSet(type)
+  for n in (0..gridColumns)
+    .tb-col-{type}-{n}
+      width (100% / gridColumns) * n
+    .tb-col-{type}-offset-{n}
+      margin-left (100% / gridColumns) * n
+    .tb-col-{type}-pull-{n}
+      right (100% / gridColumns) * n
+    .tb-col-{type}-push-{n}
+      left (100% / gridColumns) * n
+
+for n in (1..gridColumns)
+  .tb-col-{n}
+  .tb-col-xs-{n}, 
+  .tb-col-sm-{n}, 
+  .tb-col-md-{n}, 
+  .tb-col-lg-{n}
+    position relative
+    min-height 1px
+    float left
+    width 100%
+
+gridSetDefault()
+   
+@media (max-width: 768px)
+  gridSet(xs)
+@media (min-width: 768px)
+  gridSet(sm)
+@media (min-width: 992px)
+  gridSet(md)
+@media (min-width: 1200px)
+  gridSet(lg)
+     
+// margin & padding set
+for n in (0..12)
+  .tb-m-r-{n*5}
+    margin-right n*5px !important
+  .tb-m-l-{n*5}
+    margin-left n*5px !important
+  .tb-m-b-{n*5}
+    margin-bottom n*5px !important
+  .tb-m-t-{n*5}
+    margin-top n*5px !important
+  .tb-m-{n*5}
+    margin n*5px !important
+  .tb-p-r-{n*5}
+    padding-right n*5px !important
+  .tb-p-l-{n*5}
+    padding-left n*5px !important
+  .tb-p-b-{n*5}
+    padding-bottom n*5px !important
+  .tb-p-t-{n*5}
+    padding-top n*5px !important
+  .tb-p-{n*5}
+    padding n*5px !important
+
+// text-align
+aligns = (left center right)
+for align in aligns
+  .tb-text-align-{align}
+    text-align align
+  .tb-float-{align}
+    float align
+
+
+*
+  box-sizing border-box
+
+:before,:after
+  box-sizing border-box
+
+html
+  font-size 10px
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+
+body
+  font-family roboto
+  font-size 13px
+  line-height 1.42857143
+  color #5e5e5e
+  background-color #edecec
+
+input,button,select,textarea
+  font-family inherit
+  font-size inherit
+  line-height inherit
+
+a
+  color #2196f3
+  text-decoration none
+
+a:hover,a:focus
+  color #0a6ebd
+  text-decoration none
+
+a:focus
+  outline thin dotted
+  outline 5px auto -webkit-focus-ring-color
+  outline-offset -2px
+  outline none!important
+
+figure
+  margin 0
+
+img
+  vertical-align middle
+
+.img-responsive,.thumbnail > img,.thumbnail a > img,.carousel-inner > .item > img,.carousel-inner > .item > a > img
+  display block
+  max-width 100%
+  height auto
+
+.img-rounded
+  border-radius 2px
+
+.img-thumbnail
+  padding 3px
+  line-height 1.42857143
+  background-color #fff
+  border 1px solid #ededed
+  border-radius 2px
+  -webkit-transition all .2s ease-in-out
+  -o-transition all .2s ease-in-out
+  transition all .2s ease-in-out
+  display inline-block
+  max-width 100%
+  height auto
+
+.img-circle
+  border-radius 50%
+
+hr
+  margin-top 18px
+  margin-bottom 18px
+  border 0
+  border-top 1px solid #eee
+  
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+  font-family inherit
+  font-weight 500
+  line-height 1.1
+  color #000
+
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small
+  font-weight 400
+  line-height 1
+  color #777
+
+h1,.h1,h2,.h2,h3,.h3 
+  margin-top 18px
+  margin-bottom 9px
+
+h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h1 .small,.h1 .small,h2 .small,.h2 .small,h3 .small,.h3 .small
+  font-size 65%
+
+h4,.h4,h5,.h5,h6,.h6
+  margin-top 9px
+  margin-bottom 9px
+
+h4 small,.h4 small,h5 small,.h5 small,h6 small,.h6 small,h4 .small,.h4 .small,h5 .small,.h5 .small,h6 .small,.h6 .small
+  font-size 75%
+
+h1,.h1
+  font-size 33px
+
+h2,.h2
+  font-size 27px
+
+h3,.h3
+  font-size 23px
+
+h4,.h4
+  font-size 17px
+
+h5,.h5
+  font-size 13px
+
+h6,.h6
+  font-size 12px
+
+p
+  margin 0 0 9px
+  
+ul
+  padding 0
+  margin 0
+  li
+    list-style none
+  
+pre
+  overflow: auto
+
+code,kbd,pre,samp
+  font-family monospace,monospace
+  font-size 1em
+
+code,kbd,pre,samp
+  font-family Menlo,Monaco,Consolas,"Courier New",monospace
+
+code
+  padding 2px 4px
+  font-size 90%
+  color #c7254e
+  background-color #f9f2f4
+  border-radius 2px
+
+kbd
+  padding 2px 4px
+  font-size 90%
+  color #fff
+  background-color #333
+  border-radius 2px
+  box-shadow inset 0 -1px 0 rgba(0,0,0,0.25)
+
+kbd kbd
+  padding 0
+  font-size 100%
+  font-weight 700
+  box-shadow none
+
+pre
+  display block
+  padding 8.5px
+  margin 0 0 9px
+  font-size 12px
+  line-height 1.42857143
+  word-break break-all
+  word-wrap break-word
+  color #333
+  background-color #f5f5f5
+  border 1px solid #ccc
+  border-radius 2px
+
+pre code
+  padding 0
+  font-size inherit
+  color inherit
+  white-space pre-wrap
+  background-color transparent
+  border-radius 0
+
+.pre-scrollable
+  max-height 340px
+  overflow-y scroll
+  
+.tb-action
+  .tb-action-one
+    position relative
+    width 30px
+    height 30px
+    display inline-block
+    line-height 30px
+    text-align center
+    color #adadad
+    &:before
+      content ''
+      left 0
+      top 0
+      position absolute
+      width 100%
+      height 100%
+      background-color rgba(0,0,0,0.1)
+      z-index 0
+      border-radius(50%)
+      opacity(0)
+      transition(all 0.25s)
+      transform(scale3d(0,0,0))
+    &:hover
+      color #000
+      &:before
+        transform(scale3d(1,1,1))
+        opacity(1)

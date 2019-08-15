@@ -1,0 +1,187 @@
+// .tb-table
+//   width 100%
+//   max-width 100%
+//   border-collapse collapse
+//   border-spacing 0
+//   background-color #fff
+//   tbody, thead
+//     & > tr
+//       & > td, & > th
+//         padding 10px
+//         border-top 1px solid #f0f0f0
+//         vertical-align top
+//         line-height 1.42857143
+//         color #333
+//         text-align left
+
+.tb-table
+  position relative
+  width 100%
+  max-width 100%
+  border-collapse collapse
+  border-spacing 0
+  background-color #fff
+  // overflow hidden
+  
+.tb-table, .tb-table-body, .tb-table-head
+  background-color #fff
+  table-layout fixed
+  border-collapse collapse
+  tr
+    th
+      background-color #f2f2f2
+    td, th
+      transition background-color 0.25s ease
+      border-bottom 1px solid #dfe6ec
+      text-overflow ellipsis
+      vertical-align middle
+      padding 10px
+      text-align left
+      .cell
+        box-sizing border-box
+        text-overflow ellipsis
+        white-space normal
+        word-break break-all
+        padding-right 10px
+        padding-left 2px
+        overflow hidden
+        span 
+          padding-right 8px
+          cursor pointer
+
+.tb-table-body-wrapper, .tb-table-head-wrapper
+  position relative
+  width 100%
+
+/* 固定表头 */
+.tb-table-fixed-head
+  border-bottom 1px solid #dfe6ec
+  overflow hidden
+  .tb-table-body-wrapper
+    overflow-y auto
+/* 固定列 */
+.tb-table-fixed-col
+  overflow auto
+
+.hidden
+  visibility hidden
+
+.tb-table-fixed-col-left,
+.tb-table-fixed-col-right
+  position absolute
+  top 0
+  left 0
+  box-shadow 1px 0 8px #d3d4d6
+  content ""
+  overflow hidden
+
+.tb-table-fixed-col-left .tb-table-fixed-head-wrapper,
+.tb-table-fixed-col-right .tb-table-fixed-head-wrapper,
+.tb-table-fixed-col-left .tb-table-fixed-body-wrapper,
+.tb-table-fixed-col-right .tb-table-fixed-body-wrapper
+  position absolute
+  top 0
+  z-index 3
+  left 0
+
+.tb-table-fixed-col-left .tb-table-fixed-head-wrapper table,
+.tb-table-fixed-col-right .tb-table-fixed-head-wrapper table,
+.tb-table-fixed-col-left .tb-table-fixed-body-wrapper table,
+.tb-table-fixed-col-right .tb-table-fixed-body-wrapper table
+  width 100%
+  table-layout fixed
+
+.tb-table-fixed-col-left .tb-table-fixed-body-wrapper,
+.tb-table-fixed-col-right .tb-table-fixed-body-wrapper
+  top 39px
+  overflow hidden
+
+.tb-table-fixed-col-right
+  position absolute
+  right 0
+  left auto
+  top 0
+  box-shadow -1px 0 8px #d3d4d6
+  z-index 1111
+
+.tb-table-fixed-col-right .tb-table-fixed-head-wrapper,
+.tb-table-fixed-col-right .tb-table-fixed-body-wrapper
+  left auto
+  right 0
+
+.tb-table-fixed-col-right .tb-table-fixed-body-wrapper td.hover-row,
+.tb-table-fixed-col-right .tb-table-body-wrapper td.hover-row
+  background #eef1f6
+
+/* 固定列和表头 */
+.tb-table-fixed-col-header .tb-table-head-wrapper
+  overflow hidden
+
+.tb-table-fixed-col-header-container .tb-table-fixed-col-right
+  right 15px
+
+.tb-table-fixed-col-header-container .tb-table-fixed-body-wrapper
+  overflow hidden
+
+.tb-table-fixed-right-patch
+  position absolute
+  top 0
+  right 0
+  background #f2f2f2
+  overflow hidden
+
+.tb-table-fixed-head .tb-table-body-wrapper tr:last-child td
+  border-bottom none
+
+.tb-table-head-wrapper
+  overflow hidden
+
+.tb-table 
+  .hidden-columns
+    visibility hidden
+    position absolute
+    top 39px
+    right 0px
+    z-index -1
+    overflow hidden
+    .tb-table-column:last-child 
+      display inline-block
+
+.tb-table .hidden-columns .item
+  padding-left 12px
+
+.tb-table .hidden-columns .item span
+  display inline-block
+  cursor pointer
+  color #0a73c7
+.tb-table-column 
+  width 100%
+  overflow hidden
+  .item
+    width 100%
+    overflow hidden
+
+
+
+// 边框
+.tb-table.tb-table-border
+  border 1px solid #dfe6ec
+  th
+    border-right 1px solid #dfe6ec
+  th:last-child
+    border-right none
+  td
+    border-right 1px solid #dfe6ec
+  td:last-child 
+    border-right none
+  
+
+/* 带斑马纹表格 */
+.tb-table.tb-table-stripe 
+  tr:nth-child(2n)
+    background-color #fafafa
+    
+// 悬浮
+.tb-table.tb-table-hover
+  tr:hover
+    background-color #ECF9FF !important

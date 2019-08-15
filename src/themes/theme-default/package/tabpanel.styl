@@ -1,0 +1,79 @@
+.tb-tab-nav
+  list-style none
+  padding 0
+  white-space nowrap
+  margin 0
+  overflow auto
+  box-shadow inset 0 -2px 0 0 #eee
+.tb-tab-nav > li
+  display inline-block
+  vertical-align top
+.tb-tab-nav > li > a
+  display inline-block
+  color #7a7a7a
+  text-transform uppercase
+  position relative
+  width 100%
+  transition(all 0.25s)
+  font-weight 500
+
+.tb-tab-nav > li > a:after
+  content ""
+  height 2px
+  position absolute
+  width 100%
+  left 0
+  bottom 0
+  transition(all 0.25s)
+  transform scale(0)
+
+@media (min-width: 768px)
+  .tb-tab-nav > li > a
+    padding 15px
+
+@media (max-width: 768px)
+  .tb-tab-nav > li > a
+    padding 15px 8px
+
+.tb-tab-nav > li.active > a
+  color #000
+
+.tb-tab-nav > li.active > a:after
+  transform scale(1)
+
+.tb-tab-nav.tab-nav-right
+  text-align right
+
+.tb-tab-nav.tn-justified > li
+  display table-cell
+  width 1%
+  text-align center
+
+.tb-tab-nav.tn-icon > li .zmdi
+  font-size 22px
+  line-height 100%
+  min-height 25px
+
+.tb-tab-nav:not([data-tab-color]) > li > a:after
+  background #2196f3
+
+.tb-tab-nav[data-tab-color="green"] > li > a:after
+  background #4caf50
+
+.tb-tab-nav[data-tab-color="red"] > li > a:after
+  background #f44336
+
+.tb-tab-nav[data-tab-color="teal"] > li > a:after
+  background #009688
+
+.tb-tab-nav[data-tab-color="amber"] > li > a:after
+  background #ffc107
+
+.tb-tab-nav[data-tab-color="black"] > li > a:after
+  background #000
+
+.tb-tab-nav[data-tab-color="cyan"] > li > a:after
+  background #00bcd4
+
+.tb-tab-content
+  padding 20px 0

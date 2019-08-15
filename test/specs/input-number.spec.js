@@ -1,0 +1,1 @@
+import InputButton from '../../src/package/input-number';

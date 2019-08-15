@@ -1,0 +1,22 @@
+.tb-breadcrumb
+  padding 10px 0
+  list-style none
+  background-color transparent
+  margin-bottom 0
+  margin-top 0
+  border-bottom 1px solid #E5E5E5
+  li
+    display inline-block
+    a
+      color #A9A9A9
+      &:hover
+        color #7c7c7c
+        text-decoration none
+      &:focus
+        text-decoration none
+  & > li + li:before
+    content '/\00a0'
+    padding 0 5px
+    color #ccc
+  & > .active
+    color #7c7c7c

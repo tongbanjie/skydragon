@@ -1,0 +1,125 @@
+.tb-steps
+  display flex
+  .tb-step
+    &:last-of-type
+      flex-grow 0
+      flex-shrink 0
+      flex-basis auto
+      .tb-step-line
+        display none
+         
+.tb-steps-center.tb-steps-horizontal
+  .tb-step
+    text-align center
+    &:last-of-type
+      flex 1 1 50%
+    .tb-step-icon
+      display inline-block
+    .tb-step-line
+      position absolute
+      left calc(50% + 13px)
+      right -calc(50% - 13px)
+      width calc(100% - 26px)
+    .tb-step-info
+      padding 0 5px
+      
+BLUE = #03a9f4
+.tb-step
+  position relative
+  flex 1 1 50%
+  color #bbb
+  .tb-step-icon
+    width 26px
+    height 26px
+    text-align center
+    .tb-step-icon-import
+      line-height 26px
+      transition all .4s
+    .tb-step-icon-orgin
+      font-size 15px
+      line-height 22px
+      border solid 2px #ccc
+      border-radius 50%
+      transition all .4s
+  .tb-step-line
+    position absolute
+    background-color #ccc
+    &:before
+      content ''
+      display block
+      position absolute
+      background-color BLUE
+  .tb-step-info
+    font-size 12px
+    padding-right 10px
+    transition color .4s
+    .tb-step-title
+      font-size 14px
+      line-height 28px
+      
+.tb-step-process
+  .tb-step-icon
+    .tb-step-icon-import
+      color BLUE
+    .tb-step-icon-orgin
+      color #FFF
+      background-color BLUE
+      border-color BLUE
+  .tb-step-info
+    color BLUE
+    .tb-step-title
+      font-weight 600
+      
+.tb-step-finish
+  .tb-step-icon
+    .tb-step-icon-import
+      color BLUE
+    .tb-step-icon-orgin
+      color BLUE
+      border-color BLUE
+  .tb-step-info
+    color BLUE
+    
+.tb-steps-horizontal // 水平
+  .tb-step
+    .tb-step-line
+      top 12px
+      left 26px
+      right 0
+      width calc(100% - 26px)
+      height 2px
+      &:before
+        top 0
+        bottom 0
+        left 0
+        height 2px
+        width 0
+        transition width .3s
+    .tb-step-info
+      padding 0 15px 0 0
+  .tb-step-finish .tb-step-line:before
+    width 100% 
+    
+.tb-steps-vertical // 垂直
+  height 100%
+  flex-direction column
+  .tb-step
+    display flex
+    .tb-step-icon
+      flex 0 0 auto
+    .tb-step-line
+      top 26px
+      left 12px
+      height calc(100% - 26px)
+      width 2px
+      &:before
+        top 0
+        right 0
+        left 0
+        width 2px
+        height 0
+        transition height .3s
+    .tb-step-info
+      padding 0 10px 10px 6px
+  .tb-step-finish .tb-step-line:before
+    height 100%

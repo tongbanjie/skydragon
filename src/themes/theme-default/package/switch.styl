@@ -1,0 +1,109 @@
+.tb-switch
+  display inline-block
+  vertical-align top
+  vender('touch-callout', 'none')
+  vender('user-select', 'none')
+  .tb-label
+    display inline-block
+    margin 0 20px 0 0
+    vertical-align top
+    transition(color .56s cubic-bezier(0.4,0,0.2,1))
+  .tb-helper
+    display inline-block
+    position relative
+    width 40px
+    height 16px
+    border-radius 8px
+    background-color rgba(0, 0, 0, 0.26)
+    transition(background .28s cubic-bezier(0.4,0,0.2,1))
+    vertical-align middle
+    cursor pointer
+    &:before
+      content ''
+      position absolute
+      top -4px
+      left -4px
+      width 24px
+      height 24px
+      background-color #fafafa
+      box-shadow 0 2px 8px rgba(0,0,0,0.28)
+      border-radius(50%)
+      transition left .28s cubic-bezier(0.4,0,0.2,1),background .28s cubic-bezier(0.4,0,0.2,1), box-shadow .28s cubic-bezier(0.4,0,0.2,1)
+  &:not(.disabled)
+    .tb-helper:active:before
+      box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(128,128,128,0.1)
+  input
+    position absolute
+    z-index 1
+    width 46px
+    margin 0 0 0 -4px
+    height 24px
+    opaicty(0)
+    cursor pointer
+    &:checked + .tb-helper:before
+      left 20px
+  &:not([data-tb-color])
+    input:not(:disabled):checked + .tb-helper
+      background-color rgba(0,150,136,0.5)
+      &:before
+        background-color #009688
+      &:active:before
+        box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(0,150,136,0.2)
+  &.disabled
+    opacity(0.6)
+
+.tb-switch[data-tb-color="red"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(244,67,54,0.5)
+.tb-switch[data-tb-color="red"] input:not(:disabled):checked + .tb-helper:before
+  background-color #f44336
+.tb-switch[data-tb-color="red"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(244,67,54,0.2)
+  
+.tb-switch[data-tb-color="blue"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(33,150,243,0.5)
+.tb-switch[data-tb-color="blue"] input:not(:disabled):checked + .tb-helper:before
+  background-color #2196f3
+.tb-switch[data-tb-color="blue"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(33,150,243,0.2)
+
+.tb-switch[data-tb-color="amber"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(255,193,7,0.5)
+.tb-switch[data-tb-color="amber"] input:not(:disabled):checked + .tb-helper:before
+  background-color #ffc107
+.tb-switch[data-tb-color="amber"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(255,193,7,0.2)
+
+.tb-switch[data-tb-color="purple"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(156,39,176,0.5)
+.tb-switch[data-tb-color="purple"] input:not(:disabled):checked + .tb-helper:before
+  background-color #9c27b0
+.tb-switch[data-tb-color="purple"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(156,39,176,0.2)
+
+.tb-switch[data-tb-color="pink"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(233,30,99,0.5)
+.tb-switch[data-tb-color="pink"] input:not(:disabled):checked + .tb-helper:before
+  background-color #e91e63
+.tb-switch[data-tb-color="pink"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(233,30,99,0.2)
+  
+.tb-switch[data-tb-color="lime"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(205,220,57,0.5)
+.tb-switch[data-tb-color="lime"] input:not(:disabled):checked + .tb-helper:before
+  background-color #cddc39
+.tb-switch[data-tb-color="lime"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(205,220,57,0.2)
+
+.tb-switch[data-tb-color="cyan"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(0,188,212,0.5)
+.tb-switch[data-tb-color="cyan"] input:not(:disabled):checked + .tb-helper:before
+  background-color #00bcd4
+.tb-switch[data-tb-color="cyan"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(0,188,212,0.2)
+
+.tb-switch[data-tb-color="green"] input:not(:disabled):checked + .tb-helper
+  background-color rgba(76,175,80,0.5)
+.tb-switch[data-tb-color="green"] input:not(:disabled):checked + .tb-helper:before
+  background-color #4caf50
+.tb-switch[data-tb-color="green"] input:not(:disabled):checked + .tb-helper:active:before
+  box-shadow 0 2px 8px rgba(0,0,0,0.28),0 0 0 20px rgba(76,175,80,0.2)
